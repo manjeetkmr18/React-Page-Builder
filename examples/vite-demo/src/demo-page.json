@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "root": [
+    {
+      "id": "n_hero",
+      "type": "core/section",
+      "props": { "background": "#0f172a", "paddingY": 96, "paddingX": 24, "maxWidth": 960, "fullWidth": false },
+      "children": [
+        {
+          "id": "n_hero_kicker",
+          "type": "core/text",
+          "props": { "text": "OPEN SOURCE · MIT LICENSED", "align": "center", "color": "#60a5fa", "fontSize": 13, "lineHeight": 1.5, "marginBottom": 12 }
+        },
+        {
+          "id": "n_hero_title",
+          "type": "core/heading",
+          "props": { "text": "Build pages visually.\nShip them as JSON.", "level": "h1", "align": "center", "color": "#ffffff", "marginBottom": 20 }
+        },
+        {
+          "id": "n_hero_sub",
+          "type": "core/text",
+          "props": { "text": "A drag-and-drop page builder for React and Next.js. Register your own blocks, edit on a live canvas, render anywhere.", "align": "center", "color": "#cbd5e1", "fontSize": 18, "lineHeight": 1.7, "marginBottom": 28 }
+        },
+        {
+          "id": "n_hero_cta",
+          "type": "core/button",
+          "props": { "label": "Get started →", "href": "#features", "align": "center", "background": "#2563eb", "color": "#ffffff", "radius": 8, "paddingY": 14, "paddingX": 28 }
+        }
+      ]
+    },
+    {
+      "id": "n_features",
+      "type": "core/section",
+      "props": { "background": "#ffffff", "paddingY": 72, "paddingX": 24, "maxWidth": 1140, "fullWidth": false },
+      "children": [
+        {
+          "id": "n_features_title",
+          "type": "core/heading",
+          "props": { "text": "Everything is a block", "level": "h2", "align": "center", "color": "#111827", "marginBottom": 12 }
+        },
+        {
+          "id": "n_features_sub",
+          "type": "core/text",
+          "props": { "text": "Nine core blocks ship in the box. Your own widgets take a dozen lines to register.", "align": "center", "color": "#6b7280", "fontSize": 16, "lineHeight": 1.7, "marginBottom": 40 }
+        },
+        {
+          "id": "n_features_cols",
+          "type": "core/columns",
+          "props": { "columns": 3, "gap": 32, "stackOnMobile": true },
+          "children": [
+            {
+              "id": "n_f1_h",
+              "type": "core/heading",
+              "props": { "text": "🧩 Extensible", "level": "h3", "align": "left", "color": "#111827", "marginBottom": 8 }
+            },
+            {
+              "id": "n_f2_h",
+              "type": "core/heading",
+              "props": { "text": "⚡ SSR-safe", "level": "h3", "align": "left", "color": "#111827", "marginBottom": 8 }
+            },
+            {
+              "id": "n_f3_h",
+              "type": "core/heading",
+              "props": { "text": "🗄 Portable", "level": "h3", "align": "left", "color": "#111827", "marginBottom": 8 }
+            },
+            {
+              "id": "n_f1_t",
+              "type": "core/text",
+              "props": { "text": "registerBlock() adds any React component to the palette, with typed inspector fields.", "align": "left", "color": "#4b5563", "fontSize": 15, "lineHeight": 1.7, "marginBottom": 0 }
+            },
+            {
+              "id": "n_f2_t",
+              "type": "core/text",
+              "props": { "text": "Pages render in Next.js server components — zero builder JavaScript on the live site.", "align": "left", "color": "#4b5563", "fontSize": 15, "lineHeight": 1.7, "marginBottom": 0 }
+            },
+            {
+              "id": "n_f3_t",
+              "type": "core/text",
+              "props": { "text": "Documents are plain JSON. Store them in Postgres, Mongo, a CMS, or git.", "align": "left", "color": "#4b5563", "fontSize": 15, "lineHeight": 1.7, "marginBottom": 0 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n_media",
+      "type": "core/section",
+      "props": { "background": "#f8fafc", "paddingY": 72, "paddingX": 24, "maxWidth": 1140, "fullWidth": false },
+      "children": [
+        {
+          "id": "n_media_cols",
+          "type": "core/columns",
+          "props": { "columns": 2, "gap": 48, "stackOnMobile": true },
+          "children": [
+            {
+              "id": "n_media_img",
+              "type": "core/image",
+              "props": { "src": "https://placehold.co/1200x800/dbeafe/1e40af?text=Your+screenshot+here", "alt": "Editor screenshot", "radius": 12, "width": "100%" }
+            },
+            {
+              "id": "n_media_card",
+              "type": "core/section",
+              "props": { "background": "#f8fafc", "paddingY": 8, "paddingX": 0, "maxWidth": 560, "fullWidth": true },
+              "children": [
+                {
+                  "id": "n_media_h",
+                  "type": "core/heading",
+                  "props": { "text": "Edit on a live canvas", "level": "h2", "align": "left", "color": "#111827", "marginBottom": 14 }
+                },
+                {
+                  "id": "n_media_t",
+                  "type": "core/text",
+                  "props": { "text": "Drag blocks between sections, nest columns, tune every prop in the inspector, and undo anything. What you see is exactly what PageRenderer outputs.", "align": "left", "color": "#4b5563", "fontSize": 16, "lineHeight": 1.8, "marginBottom": 20 }
+                },
+                {
+                  "id": "n_media_div",
+                  "type": "core/divider",
+                  "props": { "color": "#e2e8f0", "thickness": 1, "marginTop": 4, "marginBottom": 20 }
+                },
+                {
+                  "id": "n_media_btn",
+                  "type": "core/button",
+                  "props": { "label": "Read the docs", "href": "https://github.com/webxdevelopments/react-page-builder", "align": "left", "background": "#111827", "color": "#ffffff", "radius": 8, "paddingY": 12, "paddingX": 22 }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n_footer",
+      "type": "core/section",
+      "props": { "background": "#0f172a", "paddingY": 40, "paddingX": 24, "maxWidth": 1140, "fullWidth": false },
+      "children": [
+        {
+          "id": "n_footer_t",
+          "type": "core/text",
+          "props": { "text": "Built with @manjeetkmr18/react-page-builder - this entire page is one JSON document.", "align": "center", "color": "#94a3b8", "fontSize": 14, "lineHeight": 1.6, "marginBottom": 0 }
+        }
+      ]
+    }
+  ]
+}

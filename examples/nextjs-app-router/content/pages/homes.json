@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "root": [
+    {
+      "id": "n_mrp5f3orggdgva",
+      "type": "core/section",
+      "props": {
+        "background": "#172033",
+        "paddingY": 112,
+        "paddingX": 24,
+        "maxWidth": 880,
+        "fullWidth": false,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0
+      },
+      "children": [
+        {
+          "id": "n_mrp5f3orrnx1os",
+          "type": "core/heading",
+          "props": {
+            "text": "homes",
+            "level": "h1",
+            "align": "center",
+            "color": "#ffffff",
+            "marginBottom": 16,
+            "marginTop": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0
+          }
+        },
+        {
+          "id": "n_mrp5f3orx1d9ng",
+          "type": "core/text",
+          "props": {
+            "text": "A focused message that explains what makes your product or service worth choosing.",
+            "align": "center",
+            "color": "#c8d0df",
+            "fontSize": 19,
+            "lineHeight": 1.7,
+            "marginBottom": 28,
+            "marginTop": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0
+          }
+        },
+        {
+          "id": "n_mrp5f3ortg4jz4",
+          "type": "core/button",
+          "props": {
+            "label": "Get started",
+            "href": "#",
+            "align": "center",
+            "background": "#6d5dfc",
+            "color": "#ffffff",
+            "radius": 10,
+            "paddingY": 14,
+            "paddingX": 28,
+            "marginTop": 0,
+            "marginBottom": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_mrp5f3orgbc5fk",
+      "type": "core/section",
+      "props": {
+        "background": "#ffffff",
+        "paddingY": 80,
+        "paddingX": 24,
+        "maxWidth": 1080,
+        "fullWidth": false,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0
+      },
+      "children": [
+        {
+          "id": "n_mrp5f3ordafsqz",
+          "type": "core/heading",
+          "props": {
+            "text": "Build this section your way",
+            "level": "h2",
+            "align": "center",
+            "color": "#172033",
+            "marginBottom": 16,
+            "marginTop": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0
+          }
+        },
+        {
+          "id": "n_mrp5f3ort2z9kn",
+          "type": "core/text",
+          "props": {
+            "text": "Replace this copy, add columns, images, testimonials, and anything else your page needs.",
+            "align": "center",
+            "color": "#5d6678",
+            "fontSize": 17,
+            "lineHeight": 1.7,
+            "marginBottom": 16,
+            "marginTop": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0
+          }
+        }
+      ]
+    }
+  ]
+}

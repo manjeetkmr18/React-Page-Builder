@@ -1,0 +1,15 @@
+{
+  "/[slug]/page": "app/[slug]/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/editor/page": "app/admin/editor/page.js",
+  "/admin/media/page": "app/admin/media/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/pages/new/page": "app/admin/pages/new/page.js",
+  "/admin/pages/page": "app/admin/pages/page.js",
+  "/api/media/[filename]/route": "app/api/media/[filename]/route.js",
+  "/api/media/route": "app/api/media/route.js",
+  "/api/pages/[slug]/route": "app/api/pages/[slug]/route.js",
+  "/api/pages/route": "app/api/pages/route.js",
+  "/page": "app/page.js"
+}

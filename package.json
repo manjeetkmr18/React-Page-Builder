@@ -1,0 +1,68 @@
+{
+  "name": "@manjeetkmr18/react-page-builder",
+  "version": "0.1.0",
+  "description": "Open-source, extensible drag-and-drop page builder for React and Next.js. Register your own blocks, edit visually, render anywhere from a JSON document.",
+  "keywords": [
+    "react",
+    "nextjs",
+    "page-builder",
+    "drag-and-drop",
+    "visual-editor",
+    "cms",
+    "blocks",
+    "elementor",
+    "builder"
+  ],
+  "license": "MIT",
+  "author": "Manjeet Kumar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manjeetkmr18/react-page-builder.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./editor": {
+      "types": "./dist/editor.d.ts",
+      "import": "./dist/editor.js",
+      "require": "./dist/editor.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "node --test tests/package-smoke.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run build && npm test",
+    "prepublishOnly": "npm run check"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

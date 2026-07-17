@@ -1,0 +1,15 @@
+{
+  "/[slug]/page": "/[slug]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/editor/page": "/admin/editor",
+  "/admin/media/page": "/admin/media",
+  "/admin/page": "/admin",
+  "/admin/pages/new/page": "/admin/pages/new",
+  "/admin/pages/page": "/admin/pages",
+  "/api/media/[filename]/route": "/api/media/[filename]",
+  "/api/media/route": "/api/media",
+  "/api/pages/[slug]/route": "/api/pages/[slug]",
+  "/api/pages/route": "/api/pages",
+  "/page": "/"
+}

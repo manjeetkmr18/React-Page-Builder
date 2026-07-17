@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "root": [
+    {
+      "id": "n_mrp4u13ggqtjdn",
+      "type": "core/section",
+      "props": {
+        "background": "#000000",
+        "paddingY": 48,
+        "paddingX": 24,
+        "maxWidth": 1140,
+        "fullWidth": false,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0
+      },
+      "children": [
+        {
+          "id": "n_mrp4u5qlxjhgui",
+          "type": "core/heading",
+          "props": {
+            "text": "Add your heading",
+            "level": "h2",
+            "align": "left",
+            "color": "#ffffff",
+            "marginBottom": 16,
+            "marginTop": 0,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0
+          }
+        }
+      ]
+    }
+  ]
+}
