@@ -86,12 +86,16 @@ interface MediaStorageAdapter {
     select?: (context?: MediaUploadContext) => MaybePromise<MediaUploadResult | null>;
 }
 type FieldType = "text" | "textarea" | "number" | "color" | "select" | "boolean" | "image" | "range";
+/** Which inspector tab a field appears under. Defaults to "content". */
+type FieldGroup = "content" | "style" | "advanced";
 /** Describes one editable prop shown in the inspector panel. */
 interface FieldDefinition {
     /** Key inside node.props this field edits. */
     name: string;
     label: string;
     type: FieldType;
+    /** Inspector tab this field is grouped under. Defaults to "content". */
+    group?: FieldGroup;
     /** For "select" fields. */
     options?: {
         label: string;
@@ -207,4 +211,4 @@ declare const coreBlocks: BlockDefinition[];
 /** Register the built-in block set. Call once at startup (optional — bring your own blocks if you prefer). */
 declare function registerCoreBlocks(): void;
 
-export { type BlockDefinition, type BlockRenderContext, type DropTarget, type FieldDefinition, type FieldType, type MaybePromise, type MediaAsset, type MediaStorageAdapter, type MediaUploadContext, type MediaUploadResult, type PageDocument, type PageListItem, type PageNode, PageRenderer, type PageRendererProps, type PageSaveResult, type PageStorageAdapter, type PageStorageContext, assertPageDocument, cloneNode, coreBlocks, createEmptyDocument, createNode, findNode, generateId, getAllBlocks, getBlock, getBlocksByCategory, insertNode, isDescendant, isPageDocument, isPageNode, moveNode, registerBlock, registerBlocks, registerCoreBlocks, removeNode, renderTree, spacingStyle, unregisterBlock, updateNodeProps };
+export { type BlockDefinition, type BlockRenderContext, type DropTarget, type FieldDefinition, type FieldGroup, type FieldType, type MaybePromise, type MediaAsset, type MediaStorageAdapter, type MediaUploadContext, type MediaUploadResult, type PageDocument, type PageListItem, type PageNode, PageRenderer, type PageRendererProps, type PageSaveResult, type PageStorageAdapter, type PageStorageContext, assertPageDocument, cloneNode, coreBlocks, createEmptyDocument, createNode, findNode, generateId, getAllBlocks, getBlock, getBlocksByCategory, insertNode, isDescendant, isPageDocument, isPageNode, moveNode, registerBlock, registerBlocks, registerCoreBlocks, removeNode, renderTree, spacingStyle, unregisterBlock, updateNodeProps };

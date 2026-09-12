@@ -86,12 +86,16 @@ interface MediaStorageAdapter {
     select?: (context?: MediaUploadContext) => MaybePromise<MediaUploadResult | null>;
 }
 type FieldType = "text" | "textarea" | "number" | "color" | "select" | "boolean" | "image" | "range";
+/** Which inspector tab a field appears under. Defaults to "content". */
+type FieldGroup = "content" | "style" | "advanced";
 /** Describes one editable prop shown in the inspector panel. */
 interface FieldDefinition {
     /** Key inside node.props this field edits. */
     name: string;
     label: string;
     type: FieldType;
+    /** Inspector tab this field is grouped under. Defaults to "content". */
+    group?: FieldGroup;
     /** For "select" fields. */
     options?: {
         label: string;
@@ -135,8 +139,12 @@ interface PageBuilderProps {
     onError?: (error: unknown, phase: "load" | "save") => void;
     /** Editor height. Defaults to 100vh. */
     height?: number | string;
+    /** Shown in the canvas browser-chrome address pill, e.g. "/about". */
+    previewUrl?: string;
+    /** Editor brand label in the toolbar. Defaults to "Page Builder". */
+    brand?: string;
 }
-declare function PageBuilder({ value, defaultValue, slug, storageAdapter, storageContext, mediaAdapter, autoSave, onChange, onSave, onLoad, onError, height, }: PageBuilderProps): React.JSX.Element;
+declare function PageBuilder({ value, defaultValue, slug, storageAdapter, storageContext, mediaAdapter, autoSave, onChange, onSave, onLoad, onError, height, previewUrl, brand, }: PageBuilderProps): React.JSX.Element;
 
 interface FieldProps {
     field: FieldDefinition;
