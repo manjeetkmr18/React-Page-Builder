@@ -614,7 +614,11 @@ function PageBuilder({
   onError,
   height = "100vh",
   previewUrl,
-  brand = "Page Builder"
+  brand = "Page Builder",
+  hideBrand = false,
+  hideSave = false,
+  toolbarStart,
+  toolbarEnd
 }) {
   const [doc, setDoc] = useState2(
     value ?? defaultValue ?? createEmptyDocument()
@@ -867,10 +871,11 @@ function PageBuilder({
   return /* @__PURE__ */ jsxs3("div", { className: "rpb-root", style: { height }, children: [
     /* @__PURE__ */ jsx3("style", { dangerouslySetInnerHTML: { __html: EDITOR_CSS } }),
     /* @__PURE__ */ jsxs3("div", { className: "rpb-toolbar", children: [
-      /* @__PURE__ */ jsxs3("span", { className: "rpb-brand", children: [
+      !hideBrand && /* @__PURE__ */ jsxs3("span", { className: "rpb-brand", children: [
         /* @__PURE__ */ jsx3(Icon, { name: "blocks", size: 15 }),
         brand
       ] }),
+      toolbarStart,
       /* @__PURE__ */ jsxs3("div", { className: "rpb-toolbar-group", children: [
         /* @__PURE__ */ jsx3("button", { className: "rpb-icon-btn", onClick: undo, title: "Undo (Ctrl+Z)", children: /* @__PURE__ */ jsx3(Icon, { name: "undo" }) }),
         /* @__PURE__ */ jsx3("button", { className: "rpb-icon-btn", onClick: redo, title: "Redo (Ctrl+Shift+Z)", children: /* @__PURE__ */ jsx3(Icon, { name: "redo" }) })
@@ -932,7 +937,7 @@ function PageBuilder({
           ]
         }
       ),
-      canSave && /* @__PURE__ */ jsxs3(
+      canSave && !hideSave && /* @__PURE__ */ jsxs3(
         "button",
         {
           className: "rpb-btn rpb-btn-primary",
@@ -944,7 +949,8 @@ function PageBuilder({
           ]
         }
       ),
-      canSave && saveState !== "idle" && /* @__PURE__ */ jsx3("span", { className: "rpb-save-status rpb-save-status-" + saveState, children: saveMessage ?? (saveState === "saved" ? "Saved" : saveState) })
+      canSave && saveState !== "idle" && /* @__PURE__ */ jsx3("span", { className: "rpb-save-status rpb-save-status-" + saveState, children: saveMessage ?? (saveState === "saved" ? "Saved" : saveState) }),
+      toolbarEnd
     ] }),
     /* @__PURE__ */ jsxs3("div", { className: "rpb-body", children: [
       !previewing && /* @__PURE__ */ jsxs3("aside", { className: "rpb-side rpb-side-left" + (leftCollapsed ? " rpb-side-collapsed" : ""), children: [

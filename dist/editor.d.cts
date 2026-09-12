@@ -143,8 +143,16 @@ interface PageBuilderProps {
     previewUrl?: string;
     /** Editor brand label in the toolbar. Defaults to "Page Builder". */
     brand?: string;
+    /** Hide the brand label — use when the host supplies its own via toolbarStart. */
+    hideBrand?: boolean;
+    /** Hide the built-in Save button — use when the host supplies its own actions. */
+    hideSave?: boolean;
+    /** Host content rendered at the start of the toolbar (page title, back link…). */
+    toolbarStart?: React.ReactNode;
+    /** Host content rendered at the end of the toolbar (publish actions…). */
+    toolbarEnd?: React.ReactNode;
 }
-declare function PageBuilder({ value, defaultValue, slug, storageAdapter, storageContext, mediaAdapter, autoSave, onChange, onSave, onLoad, onError, height, previewUrl, brand, }: PageBuilderProps): React.JSX.Element;
+declare function PageBuilder({ value, defaultValue, slug, storageAdapter, storageContext, mediaAdapter, autoSave, onChange, onSave, onLoad, onError, height, previewUrl, brand, hideBrand, hideSave, toolbarStart, toolbarEnd, }: PageBuilderProps): React.JSX.Element;
 
 interface FieldProps {
     field: FieldDefinition;

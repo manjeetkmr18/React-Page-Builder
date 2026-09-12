@@ -644,7 +644,11 @@ function PageBuilder({
   onError,
   height = "100vh",
   previewUrl,
-  brand = "Page Builder"
+  brand = "Page Builder",
+  hideBrand = false,
+  hideSave = false,
+  toolbarStart,
+  toolbarEnd
 }) {
   const [doc, setDoc] = (0, import_react2.useState)(
     value ?? defaultValue ?? createEmptyDocument()
@@ -897,10 +901,11 @@ function PageBuilder({
   return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "rpb-root", style: { height }, children: [
     /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("style", { dangerouslySetInnerHTML: { __html: EDITOR_CSS } }),
     /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "rpb-toolbar", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "rpb-brand", children: [
+      !hideBrand && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { className: "rpb-brand", children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Icon, { name: "blocks", size: 15 }),
         brand
       ] }),
+      toolbarStart,
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "rpb-toolbar-group", children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { className: "rpb-icon-btn", onClick: undo, title: "Undo (Ctrl+Z)", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Icon, { name: "undo" }) }),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { className: "rpb-icon-btn", onClick: redo, title: "Redo (Ctrl+Shift+Z)", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Icon, { name: "redo" }) })
@@ -962,7 +967,7 @@ function PageBuilder({
           ]
         }
       ),
-      canSave && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
+      canSave && !hideSave && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
         "button",
         {
           className: "rpb-btn rpb-btn-primary",
@@ -974,7 +979,8 @@ function PageBuilder({
           ]
         }
       ),
-      canSave && saveState !== "idle" && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "rpb-save-status rpb-save-status-" + saveState, children: saveMessage ?? (saveState === "saved" ? "Saved" : saveState) })
+      canSave && saveState !== "idle" && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "rpb-save-status rpb-save-status-" + saveState, children: saveMessage ?? (saveState === "saved" ? "Saved" : saveState) }),
+      toolbarEnd
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "rpb-body", children: [
       !previewing && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("aside", { className: "rpb-side rpb-side-left" + (leftCollapsed ? " rpb-side-collapsed" : ""), children: [

@@ -87,6 +87,14 @@ export interface PageBuilderProps {
   previewUrl?: string;
   /** Editor brand label in the toolbar. Defaults to "Page Builder". */
   brand?: string;
+  /** Hide the brand label — use when the host supplies its own via toolbarStart. */
+  hideBrand?: boolean;
+  /** Hide the built-in Save button — use when the host supplies its own actions. */
+  hideSave?: boolean;
+  /** Host content rendered at the start of the toolbar (page title, back link…). */
+  toolbarStart?: React.ReactNode;
+  /** Host content rendered at the end of the toolbar (publish actions…). */
+  toolbarEnd?: React.ReactNode;
 }
 
 export function PageBuilder({
@@ -104,6 +112,10 @@ export function PageBuilder({
   height = "100vh",
   previewUrl,
   brand = "Page Builder",
+  hideBrand = false,
+  hideSave = false,
+  toolbarStart,
+  toolbarEnd,
 }: PageBuilderProps) {
   const [doc, setDoc] = useState<PageDocument>(
     value ?? defaultValue ?? createEmptyDocument()
@@ -398,10 +410,13 @@ export function PageBuilder({
       <style dangerouslySetInnerHTML={{ __html: EDITOR_CSS }} />
 
       <div className="rpb-toolbar">
-        <span className="rpb-brand">
-          <Icon name="blocks" size={15} />
-          {brand}
-        </span>
+        {!hideBrand && (
+          <span className="rpb-brand">
+            <Icon name="blocks" size={15} />
+            {brand}
+          </span>
+        )}
+        {toolbarStart}
 
         <div className="rpb-toolbar-group">
           <button className="rpb-icon-btn" onClick={undo} title="Undo (Ctrl+Z)">
@@ -472,7 +487,7 @@ export function PageBuilder({
           <Icon name={previewing ? "eyeOff" : "eye"} />
           {previewing ? "Edit" : "Preview"}
         </button>
-        {canSave && (
+        {canSave && !hideSave && (
           <button
             className="rpb-btn rpb-btn-primary"
             disabled={saveState === "saving"}
@@ -487,6 +502,7 @@ export function PageBuilder({
             {saveMessage ?? (saveState === "saved" ? "Saved" : saveState)}
           </span>
         )}
+        {toolbarEnd}
       </div>
 
       <div className="rpb-body">
