@@ -1,6 +1,6 @@
 {
   "name": "@manjeetkmr18/react-page-builder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Open-source, extensible drag-and-drop page builder for React and Next.js. Register your own blocks, edit visually, render anywhere from a JSON document.",
   "keywords": [
     "react",

@@ -119,12 +119,17 @@ export type FieldType =
   | "image"
   | "range";
 
+/** Which inspector tab a field appears under. Defaults to "content". */
+export type FieldGroup = "content" | "style" | "advanced";
+
 /** Describes one editable prop shown in the inspector panel. */
 export interface FieldDefinition {
   /** Key inside node.props this field edits. */
   name: string;
   label: string;
   type: FieldType;
+  /** Inspector tab this field is grouped under. Defaults to "content". */
+  group?: FieldGroup;
   /** For "select" fields. */
   options?: { label: string; value: string }[];
   /** For "range" / "number" fields. */
